@@ -1,0 +1,190 @@
+/* Resetting default browser styles */
+body,
+h1,
+h2,
+h3,
+p,
+ul,
+li,
+form,
+input,
+textarea,
+figure,
+figcaption {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styles */
+body {
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f8f9fa;
+    height: 100vh;
+}
+
+/* Header styles */
+header {
+    background-color: #B1D8B7;
+    color: #fff;
+    padding: 0.5px;
+}
+
+.logo {
+    display: inline-block;
+}
+
+.logo img {
+    width: 80px;
+    height: 80px;
+    margin: 10px;
+}
+
+nav {
+    height: 100px;
+}
+
+nav ul {
+    list-style: none;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: 10px;
+    position: absolute;
+    left: calc(100% - 300px);
+    top: 50px;
+
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+nav ul li:last-child {
+    margin-right: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #189AB4;
+    font-weight: bold;
+}
+
+
+
+/* Contact section styles */
+
+
+.pin iframe {
+    margin: 8px;
+
+}
+
+.contact {
+    margin: auto;
+    background-color:#B9B7BD;
+    max-width: 300px;
+    max-height: 300px;
+    padding: 14px;
+    border-radius: 30px;
+    border-width: 20px;
+
+
+}
+
+.button:hover {
+    background: #189AB4;
+
+}
+
+.social-media {
+
+    margin-top: 10px;
+    max-width: 300px;
+    width: 300px;
+    height: 100px;
+    margin-left: 750px;
+
+}
+
+.contact-information-container {
+    display: flex;
+    width: 100%;
+    padding: 48px;
+
+}
+
+.connect-information {
+    display: inline;
+    width: 300px;
+    font-weight: bold;
+    margin-left: 15%;
+
+    
+}
+
+
+
+.social-media img {
+    height: auto;
+    border-radius: 50%;
+    transition: transform 0.3s ease;
+    width: 50px;
+ margin-bottom: 80px;
+ margin-top: 60px;
+
+}
+
+
+/* Footer styles */
+footer {
+    background-color: #B1D8B7;
+    color: #fff;
+    text-align: center;
+    height: 100px;
+}
+
+.footer-logo img {
+    max-width: 100%;
+    height: auto;
+}
+
+.footer-nav ul {
+    list-style: none;
+    margin-top: 20px;
+}
+
+.footer-nav ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav ul li:last-child {
+    margin-right: 0;
+}
+
+.footer-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Social media icons */
+
+
+
+.social-media img:hover {
+    transform: scale(1.1);
+}
+
+   
+
+.page-content {
+    padding-top: 10px;
+    background: #77A290;
+    height: calc(100% - 200px);
+}
+
