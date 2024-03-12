@@ -1,16 +1,5 @@
 /* Resetting default browser styles */
-body,
-h1,
-h2,
-h3,
-p,
-ul,
-li,
-form,
-input,
-textarea,
-figure,
-figcaption {
+    {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -28,7 +17,8 @@ body {
 
 header {
 
-    background-color: #B1D8B7; /* Medium Green */
+    background-color: #B1D8B7;
+    /* Medium Green */
 
     color: #fff;
 
@@ -37,18 +27,20 @@ header {
     text-align: center;
 
 }
+
 .logo img {
 
-    width: 50px; /* Adjust the size of your logo */
+    width: 50px;
+    /* Adjust the size of your logo */
 
 }
- 
+
 .menu {
 
     margin-top: 20px;
 
 }
- 
+
 .menu li {
 
     display: inline-block;
@@ -56,7 +48,7 @@ header {
     margin-right: 20px;
 
 }
- 
+
 .menu a {
 
     text-decoration: none;
@@ -68,16 +60,16 @@ header {
 
 
 .pin iframe {
-  position: relative;
-width: 650px;
-height: 60%;
-   
+    position: relative;
+    width: 650px;
+    height: 60%;
+
 
 }
 
 .contact {
     margin: auto;
-    background-color:#B9B7BD;
+    background-color: #B9B7BD;
     max-width: 450px;
     max-height: 300px;
     padding: 14px;
@@ -90,16 +82,6 @@ height: 60%;
 
 .button:hover {
     background: #189AB4;
-
-}
-
-.social-media {
-
-    margin-top: 10px;
-    max-width: 300px;
-    width: 300px;
-    height: 100px;
-    margin-left: 400px;
 
 }
 
@@ -116,7 +98,7 @@ height: 60%;
     font-weight: bold;
     margin-left: 15%;
 
-    
+
 }
 
 
@@ -125,8 +107,8 @@ height: 60%;
     border-radius: 50%;
     transition: transform 0.3s ease;
     width: 50px;
- margin-bottom: 80px;
- margin-top: 60px;
+    margin-bottom: 80px;
+    margin-top: 60px;
 
 }
 
@@ -134,13 +116,14 @@ height: 60%;
 
 footer {
 
-    background-color: #5cb85c; /* Medium Green */
+    background-color: #5cb85c;
+    /* Medium Green */
 
     color: #fff;
 
     text-align: center;
 
-    padding: 25px 0;
+    padding: 5px 0;
 
     display: flex;
 
@@ -149,38 +132,59 @@ footer {
     align-items: center;
 
 }
- 
- 
+
+.social-icons {
+
+    display: flex;
+
+}
+
+.social-icon {
+
+    color: #fff;
+
+    font-size: 20px;
+
+    margin-left: auto;
+    margin-right: 10px;
+
+}
+
+.social-icon:hover {
+
+    color: #f4d35e;
+    /* Yellow */
+
+}
+
 .hero-image {
 
-    width: 100%; /* Ensure the image fills the entire width of its container */
+    width: 100%;
+    /* Ensure the image fills the entire width of its container */
 
-    max-height: 400px; /* Set a maximum height to prevent the image from becoming too tall */
+    max-height: 400px;
+    /* Set a maximum height to prevent the image from becoming too tall */
 
-    object-fit: cover; /* Ensure the image covers the entire container while maintaining its aspect ratio */
+    object-fit: cover;
+    /* Ensure the image covers the entire container while maintaining its aspect ratio */
 
-    border-radius: 10px; /* Add a border-radius for rounded corners, if desired */
+    border-radius: 10px;
+    /* Add a border-radius for rounded corners, if desired */
 
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow for depth */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    /* Add a subtle box shadow for depth */
 
 }
 
 
-
-
-.social-media img:hover {
-    transform: scale(1.1);
-}
-
-   
 
 .page-content {
     padding-top: 10px;
     background: #77A290;
     height: calc(100% - 200px);
 }
-#message{
+
+#message {
     width: 80%;
     padding-bottom: 40px;
 }
-
