@@ -1,5 +1,6 @@
 /* Resetting default browser styles */
-body, html {
+body,
+html {
     min-height: 100%;
 }
 
@@ -38,7 +39,7 @@ header {
 .logo {
     display: inline-block;
     text-align: center;
-    
+
 }
 
 .logo img {
@@ -154,7 +155,7 @@ main {
 /* Contact section styles */
 
 .contact-section {
-    
+
     align-content: center;
     text-align: center;
     margin-bottom: 40px;
@@ -173,11 +174,9 @@ main {
     margin-bottom: 5px;
 }
 
-.contact-form input[type="text"] 
-.cotact-form input[type="email"]  
-.contact-form textarea {
-  
-   text-align: center;
+.contact-form input[type="text"] .cotact-form input[type="email"] .contact-form textarea {
+
+    text-align: center;
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -199,33 +198,30 @@ main {
 
 .contact-form input[type="submit"]:hover {
     background-color: #0056b3;
-
 }
-.social-media img{
+
+.social-media img {
     box-sizing: border-box;
     float: right;
-  margin: 100px;
-  margin-bottom: 20px;
-  
+    margin: 100px;
+    margin-bottom: 20px;
 }
-.pin iframe{
-margin: 50px;
 
+.pin iframe {
+    margin: 50px;
 }
+
 .contact {
     margin: auto;
-    background:#fff;
+    background: #fff;
     max-width: 250px;
     padding: 14px;
     border-radius: 8px;
-    
-    }
-.button:hover{
-    background: #189AB4;
-  
 }
 
-s
+.button:hover {
+    background: #189AB4;
+}
 
 /* Footer styles */
 footer {
@@ -275,6 +271,7 @@ footer {
 .social-media img:hover {
     transform: scale(1.1);
 }
+
 .image-row {
     display: inline-flex;
     box-sizing: border-box;
