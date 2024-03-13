@@ -85,7 +85,7 @@ header {
     max-width: 400px;
     /* Adjust the max-width as needed */
     padding: 50px;
-    border-radius: 30px;
+    background: #fff;
 
 }
 
@@ -102,22 +102,22 @@ header {
 
 .page_ input {
     background-color: white;
-    border-radius: 30px;
-    height: 5vh;
-    font-size: 30px;
+    border-radius: 5px;
+    font-size: 20px;
 }
 
 .page_ textarea {
     background-color: white;
-    border-radius: 30px;
+    border-radius: 5px;
     height: 20vh;
-    font-size: 40px;
+    font-size: 20px;
 }
 
 .page_ select {
     background: white;
-    border-radius: 30px;
-    height: 5vh;
+    border-radius: 5px;
+    height: 30px;
+
 }
 
 .form-form h2 {
@@ -126,12 +126,16 @@ header {
 }
 
 .page_ label {
-    color: black;
-    font-size: 30px;
+    color: #189AB4;
+    font-size: 20px;
+}
+
+.page_ .button {
+    color: #189AB4;
 }
 
 .page_ .button:hover {
-    color: green;
+    background: #B1D8B7;
 }
 
 /* How It Works section styles */
