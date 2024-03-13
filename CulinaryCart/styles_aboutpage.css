@@ -1,5 +1,6 @@
 /* Resetting default browser styles */
-body, html {
+body,
+html {
     min-height: 100%;
 }
 
@@ -30,7 +31,8 @@ body {
 /* Header styles */
 header {
 
-    background-color: #B1D8B7; /* Medium Green */
+    background-color: #B1D8B7;
+    /* Medium Green */
 
     color: #fff;
 
@@ -43,19 +45,20 @@ header {
     opacity: 0.9;
 
 }
- 
+
 .logo img {
 
-    width: 50px; /* Adjust the size of your logo */
+    width: 50px;
+    /* Adjust the size of your logo */
 
 }
- 
+
 .menu {
 
     margin-top: 20px;
 
 }
- 
+
 .menu li {
 
     display: inline-block;
@@ -63,7 +66,7 @@ header {
     margin-right: 20px;
 
 }
- 
+
 .menu a {
 
     text-decoration: none;
@@ -73,6 +76,7 @@ header {
     font-size: 16px;
 
 }
+
 /* Main section styles */
 main {
     padding: 20px;
@@ -129,7 +133,8 @@ main {
     margin-left: 15%;
 }
 
-.about-section h2, h3 {
+.about-section h2,
+h3 {
     text-align: center;
     margin-bottom: 20px;
 }
@@ -163,7 +168,7 @@ main {
 /* Contact section styles */
 
 .contact-section {
-    
+
     align-content: center;
     text-align: center;
     margin-bottom: 40px;
@@ -182,11 +187,9 @@ main {
     margin-bottom: 5px;
 }
 
-.contact-form input[type="text"] 
-.cotact-form input[type="email"]  
-.contact-form textarea {
-  
-   text-align: center;
+.contact-form input[type="text"] .cotact-form input[type="email"] .contact-form textarea {
+
+    text-align: center;
     width: 100%;
     padding: 10px;
     margin-bottom: 15px;
@@ -210,28 +213,32 @@ main {
     background-color: #0056b3;
 
 }
-.social-media img{
+
+.social-media img {
     box-sizing: border-box;
     float: right;
-  margin: 100px;
-  margin-bottom: 20px;
-  
-}
-.pin iframe{
-margin: 50px;
+    margin: 100px;
+    margin-bottom: 20px;
 
 }
+
+.pin iframe {
+    margin: 50px;
+
+}
+
 .contact {
     margin: auto;
-    background:#fff;
+    background: #fff;
     max-width: 250px;
     padding: 14px;
     border-radius: 8px;
-    
-    }
-.button:hover{
+
+}
+
+.button:hover {
     background: #189AB4;
-  
+
 }
 
 s
@@ -284,11 +291,13 @@ footer {
 .social-media img:hover {
     transform: scale(1.1);
 }
+
 .image-row {
     display: inline-flex;
     box-sizing: border-box;
     padding: 5px;
 }
+
 .hidden {
     text-align: center;
 }
@@ -301,23 +310,28 @@ footer {
     border-radius: 10rem;
     transition: transform 0.3s ease-in-out;
 }
+
 .box:hover:hover {
-    transform: scale(1.1); /* Enlarge on hover */
+    transform: scale(1.1);
+    /* Enlarge on hover */
     transition: transform 0.3s ease;
-    }
-.execs{
+}
+
+.execs {
     display: flex;
     justify-content: space-around;
     align-content: center;
     align-items: center;
     border-radius: 10rem;
-    transition: transform 0.3s ease-in-out; /* Add transition for smooth effect */
+    transition: transform 0.3s ease-in-out;
+    /* Add transition for smooth effect */
 
 }
+
 .hidden {
-    opacity: 0;
     transition: all 3s;
 }
+
 .show {
     opacity: 1;
 }
@@ -328,10 +342,11 @@ footer {
     width: 100%;
     height: 100vh;
     background: transparent;
-    display:flex;
+    display: flex;
     align-items: center;
     justify-content: center;
 }
+
 form {
     background: #ddd6d6;
     display: flex;
@@ -347,7 +362,8 @@ form h3 {
     margin-bottom: 20px;
 }
 
-form input, form textarea {
+form input,
+form textarea {
     border: 0;
     margin: 10px 0;
     padding: 20px;
@@ -363,7 +379,7 @@ form button {
     font-size: 18px;
     border: 0;
     outline: none;
-    cursor:pointer;
+    cursor: pointer;
     width: 150px;
     margin: 20px auto 0;
     border-radius: 30px;
