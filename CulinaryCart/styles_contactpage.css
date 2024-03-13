@@ -6,14 +6,16 @@
 }
 
 header {
-    background-color: #B1D8B7; /* Medium Green */
+    background-color: #B1D8B7;
+    /* Medium Green */
     color: #fff;
     padding: 20px;
     text-align: center;
 }
 
 .logo img {
-    width: 50px; /* Adjust the size of your logo */
+    width: 50px;
+    /* Adjust the size of your logo */
 }
 
 .menu {
@@ -37,15 +39,15 @@ header {
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 160px 0 60px 0;  
+    padding: 160px 0 60px 0;
 }
 
 .bg-breadcrumb h3 {
     color: #fff;
-    font-size: 50px;
+    font-size: 40px;
     text-align: center;
     padding-bottom: 20px;
-    margin-left: 600px;
+    margin-right: -900px;
 }
 
 .bg-breadcrumb p {
@@ -53,39 +55,45 @@ header {
     text-align: center;
     font-weight: bolder;
     color: #fff;
-    margin-left: 600px;
+    margin-right: -900px;
 }
 
 /* Contact Start */
-.form{
+.form {
     box-sizing: border-box;
     border-radius: 20px;
     color: #fff;
-    
+
 }
+
 .contact {
     background: url(images/alina-karpenko-jH1PBHevj38-unsplash.jpg);
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
-    text-align: center; /* Center the content */
+    text-align: center;
+    /* Center the content */
 }
 
 .page {
     margin: auto;
-    max-width: 400px; /* Adjust the max-width as needed */
+    max-width: 400px;
+    /* Adjust the max-width as needed */
     padding: 50px;
     border-radius: 30px;
-  
+
 }
 
 .page_ input,
 .page_ textarea,
 .page_ select {
-    width: 100%; /* Make inputs, textarea, and select full-width */
-    max-width: 100%; /* Make inputs, textarea, and select full-width */
-    margin-bottom: 20px; /* Add some space between inputs */
+    width: 100%;
+    /* Make inputs, textarea, and select full-width */
+    max-width: 100%;
+    /* Make inputs, textarea, and select full-width */
+    margin-bottom: 20px;
+    /* Add some space between inputs */
 }
 
 .page_ input {
@@ -112,16 +120,20 @@ header {
     text-align: center;
     font-size: 40px;
 }
-.page_ label{
+
+.page_ label {
     color: black;
     font-size: 30px;
 }
-.page_ .button:hover{
+
+.page_ .button:hover {
     color: green;
 }
+
 /* How It Works section styles */
 .how-it-works {
-    background-color: #eaf7eb; /* Light Green */
+    background-color: #eaf7eb;
+    /* Light Green */
     padding: 60px 20px;
     text-align: center;
 }
@@ -139,7 +151,8 @@ header {
 
 .step i {
     font-size: 36px;
-    color: #5cb85c; /* Medium Green */
+    color: #5cb85c;
+    /* Medium Green */
 }
 
 .step h3 {
@@ -164,7 +177,8 @@ header {
 
 /* copyright Start */
 footer {
-    background-color: #5cb85c; /* Medium Green */
+    background-color: #5cb85c;
+    /* Medium Green */
     color: #fff;
     text-align: center;
     padding: 5px 0;
@@ -185,7 +199,8 @@ footer {
 }
 
 .social-icon:hover {
-    color: #f4d35e; /* Yellow */
+    color: #f4d35e;
+    /* Yellow */
 }
 
 .hero-image {
