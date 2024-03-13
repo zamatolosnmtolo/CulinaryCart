@@ -1,71 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - CulinaryCart</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles_aboutpage.css">
+    <meta charset="utf-8">
+    <title>CulinaryCart</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="styles_contactpage.css" rel="stylesheet">
 </head>
+
 <body>
     <header>
         <nav>
             <div class="logo">
                 <img src="images/culinaryicon.png" alt="CulinaryCart Logo">
             </div>
-            <ul>
+            <ul class="menu">
                 <li><a href="homepage.html">Home</a></li>
                 <li><a href="aboutpage.html">About Us</a></li>
                 <li><a href="contactpage.html">Contact Us</a></li>
+                <li><a href="menupage.html">Menu</a></li>
             </ul>
         </nav>
     </header>
-    <section class="about">
+    <!-- Navbar End -->
 
-        <h2>About CulinaryCart</h2>
-        <video controls src="video/Food Reel 2023 - Darío Idoate.mp4" width="50%" height="50%"></video>
-        
-        <p><i>CulinaryCart is passionate about providing fresh, high-quality ingredients along with chef-designed recipes to make cooking delicious meals at home easy and enjoyable. Our mission is to inspire people to cook more and eat well</i>.</p>
-    <div class="image-row">
-        <div class="column">        
-            <img src="images/AboutUs.png" alt="Meal Types" width="100%" height="100%">
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-breadcrumb">
+        <div class="container text-center py-5" style="max-width: 900px;">
+            <h3 class="text-white display-3 mb-4 wow fadeInDown" data-wow-delay="0.1s">Contact Us</h3>
+            <p>Whether you're curious about a specific meal, need help with a project, or just want to learn something
+                new, we are here to provide you with an easy yummy solution.</p>
+
         </div>
     </div>
-    </section>
-    <section class="foodsource">
-        <div class="source">
-            <h3>Where We Source Our Food</h3>
-        
-            <p><i>At CulinaryCart, we believe in supporting local farmers and producers to bring you the freshest, most flavorful ingredients in every meal kit. That's why we source our food from Cape Town's vibrant markets and trusted suppliers. From the bustling fish markets along the coast to the picturesque strawberry farms in the surrounding countryside, we work closely with our partners to ensure that our ingredients meet the highest standards of quality and sustainability. By prioritizing locally sourced produce, meats, and seafood, we not only support our community but also reduce our carbon footprint and promote a more resilient food system. When you choose CulinaryCart, you can taste the difference that fresh, locally sourced ingredients make in every bite.</i></p>
-            <img src="images/fishmark.jpg" alt="Fish Market" width="50%" height="50%">
-            <img src="images/vemarket.jpg" alt="Strawberry Farm" width="50%" height="50%">
-            <img src="images/market.jpg" alt="Local Producers" width="50%" height="50%">
-        </div>
-    </section>
-    <section class="why">
-        <div class="why-us">
-            <h3>Why Choose CulinaryCart?</h3>
-            <p><i>At CulinaryCart, we pride ourselves on offering a unique blend of quality, convenience, and creativity that sets us apart. We prioritize locally sourced, fresh ingredients, ensuring that every meal kit is bursting with flavor and goodness. Our chef-curated recipes are designed to inspire and empower, whether you're a seasoned home cook or just starting out on your culinary journey. With flexible subscription options, customizable menus, and eco-friendly packaging, CulinaryCart makes it easy to enjoy delicious meals while supporting local farmers and reducing food waste. Discover the joy of home cooking with CulinaryCart.</i></p>
-            <img src="images/fish.jpg" alt="Quality Ingredients" width="50%" height="50%">
-            <img src="images/groupmeal.jpg" alt="Convenience" width="50%" height="50%">
-            <img src="images/quickmeal.jpg" alt="Creativity" width="50%" height="50%">
-        </div>
-    </section>
-    <section class="team">
-        <div class="center">
-            <h3>Meet our <Span style="color: #189AB4;">Team</Span></h3>
-        </div>
-        <div class="team-content">
-            <div class="box">
-                <img src="images/Momo.jfif" alt="Gomolemo Senge" width="20%" height="20%" style="border-radius: 20rem;">                
+    <!-- Header End -->
+
+    <section class="how-it-works">
+        <h2>How It Works</h2>
+        <div class="steps">
+            <div class="step">
+                <i class="fa fa-map-pin fa-2x"></i>
+                <h3>Browse Recipes</h3>
+                <p>Explore our wide range of recipes curated by top chefs.</p>
+            </div>
+            <div class="step">
+                <i class="fa fa-phone fa-2x"></i>
+                <h3>Receive Ingredients</h3>
+                <p>Get all the fresh ingredients you need, pre-portioned and delivered to your doorstep.</p>
+            </div>
+            <div class="step">
+                <i class="fa fa-envelope fa-2x"></i>
+                <h3>Cook with Ease</h3>
+                <p>Follow our easy-to-cook recipes and enjoy delicious meals in no time.</p>
             </div>
         </div>
     </section>
-     
-    <footer>
-        <p>&copy; 2024 CulinaryCart. All rights reserved.</p>
-    </footer>
+
+
+    <!-- Contact Start -->
+    <div class="container-fluid contact py-5">
+        <div class="container py-5">
+            <div class="section-title mb-5 wow fadeInUp" data-wow-delay="0.1s">
+            </div>
+            <div>
+                <div class="form">
+                    <div class="form-form">
+                        <h2 class="fadeIn">Get in Touch</h2>
+                        <div class="page fadeInUp">
+                            <form action="submit_form.php" method="post" class="page_">
+                                <label for="name">Name:</label>
+                                <input type="text" id="name" name="name" required><br><br>
+                                <label for="email">Email:</label>
+                                <input type="email" id="email" name="email" required><br><br>
+                                <label for="Issue">Topic</label>
+                                <select id="Issue" name="issue">
+                                    <option value="Issue"> Select Issue</option>
+                                    <option value="About CulinaryCart">About CulinaryCart</option>
+                                    <option value="Account Issue">Account Issue</option>
+                                    <option value="Delivery Issue">Delivery Issue</option>
+                                    <option value="Feedback">Feedback</option>
+                                    <option value="Order Issue">Order Issue</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                                <label for="message">Message:</label><br>
+                                <textarea id="message" name="message" rows="4" required></textarea><br><br>
+                                <input type="submit" value="Submit" class="button">
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <!-- Contact End -->
+
+        <div class="container-fluid footer py-5 wow fadeIn" data-wow-delay="0.2s">
+            <div class="container py-5">
+                <div class="row g-5">
+
+
+
+                </div>
+            </div>
+        </div>
+        <!-- Footer End -->
+        <footer>
+            <p>&copy; 2024 CulinaryCart. All rights reserved.</p>
+            <div class="social-icons">
+                <a href="https://www.facebook.com/profile.php?id=61556419917501" class="social-icon"><i
+                        class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/CulinaryCartZA" class="social-icon"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/culinarycart_/?next=%2F&hl=en" class="social-icon"><i
+                        class="fab fa-instagram"></i></a>
+            </div>
+        </footer>
+
 </body>
+
 </html>
