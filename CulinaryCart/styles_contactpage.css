@@ -5,6 +5,10 @@
     box-sizing: border-box;
 }
 
+body {
+    font-family: 'poppins', sans-serif;
+}
+
 header {
     background-color: #B1D8B7;
     /* Medium Green */
