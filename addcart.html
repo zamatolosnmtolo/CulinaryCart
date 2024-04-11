@@ -1,0 +1,605 @@
+[12:58 AM] Gomolelo.Senge
+  [Monday 15:05] Gomolelo.Senge
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <style>
+    /* Add your CSS styles here */
+    * {
+ 
+        margin: 0;
+   
+        padding: 0;
+   
+        box-sizing: border-box;
+   
+    }
+     
+    /* Body styles */
+   
+    body {
+   
+        font-family: 'poppins', sans-serif;
+   
+        background-color: #f7f7f7;
+   
+        color: #333;
+   
+    }
+     
+    /* Header styles */
+   
+    header {
+   
+        background-color: #B1D8B7; /* Medium Green */
+   
+        color: #fff;
+   
+        padding: 20px;
+   
+        text-align: center;
+   
+    }
+     
+    .logo img {
+   
+        width: 50px; /* Adjust the size of your logo */
+   
+    }
+     
+    .nav {
+   
+        margin-top: 20px;
+   
+    }
+     
+    .nav li {
+   
+        display: inline-block;
+   
+        margin-right: 20px;
+   
+    }
+     
+    .nav a {
+   
+        text-decoration: none;
+   
+        color: #189AB4;
+   
+        font-size: 16px;
+   
+    }
+ 
+      button {
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+ 
+      button:hover {
+        background-color: #0056b3;
+      }
+ 
+      #cart-items li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+ 
+      #total-cost {
+        font-weight: bold;
+      }
+ 
+      quantity-selector {
+        display: flex;
+        align-items: center;
+      }
+      .quantity-selector button {
+        width: 30px;
+        height: 30px;
+        border: none;
+        background-color: #f0f0f0;
+        cursor: pointer;
+      }
+      .quantity-selector input {
+        width: 50px;
+        text-align: center;
+        margin: 0 10px;
+      }
+  </style>
+</head>
+  <header>
+    <!-- Header & Navigation -->
+    <nav>
+      <div class="logo">
+        <img src="images/culinaryicon.png" alt="CulinaryCart Logo">
+      </div>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutpage.html">About Us</a></li>
+        <li><a href="contactpage.html">Contact Us</a></li>
+        <!--<li><a class="nav-link" href="#"><img src="images/contact.jpg"></a></li>
+        <li><a class="nav-link" href="cart.html"><img src="images/cart.jpg"></a></li>-->
+      </ul>
+    </nav>
+  </header>
+ 
+  <div id="available-meals">
+    <h2>Add a Meal to Cart</h2>
+    <div class="meal">
+      <h3>Cheese Burger</h3>
+      <p>Extra Spicy</p>
+      <p>No mayo</p>
+      <p>Price: R23.99</p>
+      <<div class="quantity-selector">
+        <button onclick="decreaseQuantity()">-</button>
+        <input type="text" id="quantity" value="1">
+        <button onclick="increaseQuantity()">+</button>
+      </div>
+      <button onclick="addToCart()">Add to Cart</button>
+      <button onclick="clearCart()">Clear Cart</button> <!-- Moved Clear Cart button here -->
+      <button onclick="addToCart()">Add to Cart</button>
+    </div>
+  </div>
+ 
+  <div id="add-coupon">
+    <h2>Add a Coupon</h2>
+    <input type="text" placeholder="Enter coupon code">
+    <button>Apply Coupon</button>
+  </div>
+ 
+  <div id="shopping-cart">
+    <ul id="cart-items"></ul>
+    <p id="total-cost">Total Cost: R0</p>
+    <button class="checkout-btn">Checkout</button>
+    <button onclick="clearCart()">Clear Cart</button>
+  </div>
+  <script>
+    let quantityInput = document.getElementById('quantity');
+ 
+    function increaseQuantity() {
+      let quantity = parseInt(quantityInput.value);
+      quantityInput.value = quantity + 1;
+    }
+ 
+    function decreaseQuantity() {
+      let quantity = parseInt(quantityInput.value);
+      if (quantity > 1) {
+        quantityInput.value = quantity - 1;
+      }
+    }
+ 
+    let cartItems = [];
+  let totalCost = 0;
+ 
+  function addToCart() {
+    const mealName = "Cheese Burger"; // Assuming the meal name is fixed for now
+    const quantity = document.querySelector('input[name="quantity"]:checked').value;
+    const price = 23.99; // Assuming the price is fixed for now
+ 
+    for (let i = 0; i < quantity; i++) {
+      cartItems.push({ name: mealName, price });
+    }
+ 
+    updateCartDisplay();
+  }
+ 
+  function removeFromCart(index) {
+    cartItems.splice(index, 1);
+    updateCartDisplay();
+  }
+ 
+  function clearCart() {
+    cartItems = [];
+    totalCost = 0;
+    updateCartDisplay();
+  }
+ 
+  function applyCoupon() {
+    // Add logic to apply the coupon code and update the total cost if needed
+  }
+ 
+  function updateCartDisplay() {
+    const cartItemsList = document.getElementById('cart-items');
+    cartItemsList.innerHTML = '';
+    totalCost = 0;
+ 
+    cartItems.forEach((item, index) => {
+      const listItem = document.createElement('li');
+      listItem.textContent = `${item.name} - R${item.price}`;
+ 
+      const removeButton = document.createElement('button');
+      removeButton.textContent = 'Remove';
+      removeButton.onclick = () => removeFromCart(index);
+ 
+      listItem.appendChild(removeButton);
+      cartItemsList.appendChild(listItem);
+ 
+      totalCost += item.price;
+    });
+ 
+    document.getElementById('total-cost').textContent = `Total Cost: R${totalCost.toFixed(2)}`;
+  }
+  </script>
+</body>
+</html>
+ 
+ 
+[Tuesday 14:11] Gomolelo.Senge
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <style>
+    /* Add your CSS styles here */
+    * {
+ 
+        margin: 0;
+   
+        padding: 0;
+   
+        box-sizing: border-box;
+   
+    }
+     
+    /* Body styles */
+   
+    body {
+   
+        font-family: 'poppins', sans-serif;
+   
+        background-color: #f7f7f7;
+   
+        color: #333;
+   
+    }
+     
+    /* Header styles */
+   
+    header {
+   
+        background-color: #B1D8B7; /* Medium Green */
+   
+        color: #fff;
+   
+        padding: 20px;
+   
+        text-align: center;
+   
+    }
+     
+    .logo img {
+   
+        width: 50px; /* Adjust the size of your logo */
+   
+    }
+     
+    .nav {
+   
+        margin-top: 20px;
+   
+    }
+     
+    .nav li {
+   
+        display: inline-block;
+   
+        margin-right: 20px;
+   
+    }
+     
+    .nav a {
+   
+        text-decoration: none;
+   
+        color: #189AB4;
+   
+        font-size: 16px;
+   
+    }
+ 
+      button {
+        padding: 5px 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+      }
+ 
+      button:hover {
+        background-color: #0056b3;
+      }
+ 
+      #cart-items li {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+ 
+      #total-cost {
+        font-weight: bold;
+      }
+ 
+      quantity-selector {
+        display: flex;
+        align-items: center;
+      }
+      .quantity-selector button {
+        width: 30px;
+        height: 30px;
+        border: none;
+        background-color: #f0f0f0;
+        cursor: pointer;
+      }
+      .quantity-selector input {
+        width: 50px;
+        text-align: center;
+        margin: 0 10px;
+      }
+      .quantity-selector button {
+        color: #333;
+      }
+      .container {
+        text-align: center;
+        margin-top: 20px;
+        background-color:  #f7f7f7;
+      }
+      .inline-element {
+        display: inline-block;
+        margin: 0 10px;
+        vertical-align: middle;
+      }
+      .text-container {
+        text-align: center;
+        margin-top: 20px;
+        background-color:  #f7f7f7;
+      }
+      .mealtype-container {
+        text-align: center;
+        margin-top: 20px;
+        background-color:  #f7f7f7;
+      }
+      .inline-element {
+        display: inline-block;
+        margin: 0 10px;
+        vertical-align: top;
+      }
+      .inline-element button {
+        display: flex; /* Make button and its contents display flex */
+        align-items: center; /* Center align contents vertically */
+        border: 2px solid #000; /* Set default border color to black */
+        background-color: transparent;
+        padding: 1px 5px;
+        cursor: pointer;
+        transition: border-color 0.3s; /* Add transition effect to border color change */
+        position: relative; /* Add position relative for absolute positioning of the tick */
+    }
+    .inline-element button:hover, button.active {
+      border-color: #1eb389;
+      }
+      .block {
+        width: 150px;
+        height: 150px;
+        background-color: white;
+        border: 2px solid #1eb389;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+      .image-wrapper img {
+        width: 20%;
+        height: auto;
+        border-radius: 50%;
+      }
+      .meal-type-content {
+        margin-top: 10px;
+        text-align: center;
+      }
+      .meal-type-content h4 {
+        margin: 0;
+        color: #1eb389;
+      }
+      .meal-type-content p {
+        margin: 0;
+        color: #1eb389;
+      }
+  </style>
+</head>
+  <header>
+    <!-- Header & Navigation -->
+    <nav>
+      <div class="logo">
+        <img src="images/culinaryicon.png" alt="CulinaryCart Logo">
+      </div>
+      <ul class="nav">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="aboutpage.html">About Us</a></li>
+        <li><a href="contactpage.html">Contact Us</a></li>
+        <li><a href="menu.html">Menu</a></a></li>
+        <li><a class="nav-link" href="#"><img src="images/contact.jpg"></a></li>
+        <li><a class="nav-link" href="/addToCart.html"><img src="images/cart.jpg"></a></li>
+      </ul>
+    </nav>
+  </header>
+ 
+  <div class="container">
+  <div class="inline-element">
+    <div class="CouponContainer_couponIcon"><span class=""><svg height="32" width="32" viewBox="0 0 32 32"><g fill="#1eb389"><path d="M14.8 2.917c.66 0 1.26.264 1.692.696l10.8 10.8c.432.432.708 1.044.708 1.704 0 .66-.264 1.26-.708 1.692l-8.4 8.4a2.346 2.346 0 0 1-1.692.708c-.66 0-1.26-.264-1.692-.696l-10.8-10.8A2.395 2.395 0 0 1 4 13.717v-8.4c0-1.32 1.08-2.4 2.4-2.4zm-5.4 3.6a1.8 1.8 0 1 0 0 3.6 1.8 1.8 0 0 0 0-3.6z"></path></g></svg></span></div>
+  </div>
+  <div class="inline-element">
+    <p class="CouponContainer_promotionText">Enjoy 65% off the first five weeks of your new subscription. </p>
+  </div>
+  <div class="inline-element">
+    <button class="pom-Button pom-Button--green pom-Button--pill-filled pom-Button--small" type="button"><div class="pom-Button--mouseover"></div><span style="opacity: 1;">Redeem Offer</span></button>
+  </div>
+  <div class="inline-element">
+    <button class="pom-Button pom-Button--blue pom-Button--link pom-Button--small" id="offer-details-click" type="button" style="color: rgb(0, 169, 121);"><div class="pom-Button--mouseover"></div><span style="opacity: 1;">Offer Details</span></button>
+  </div>
+</div>
+ 
+<div class="text-container">
+    <h2>Personalize your meal subscription</h2>
+    <p>Get excited—your choice of 80+ weekly options is just a few steps away!</p>
+  </div>
+ 
+  <div class="mealtype-container">
+    <h2>1. Choose a type of meal</h2>
+    <div class="inline-element">
+        <button type="button" id="pricing-page-mk-toggled" class="_PreferenceAndPlanSelector_selected__6eHEn">
+          <div class="block">
+            <div class="image-wrapper">
+              <img src="" alt="Meal Kits">
+            </div>
+          </div>
+          <div class="meal-type-content">
+            <h4>Meal Kits</h4>
+            <p>Ingredients and easy-to-follow recipes for home-cooked meals</p>
+          </div>
+          <div class="tick"></div>
+        </button>
+      </div>
+      <div class="inline-element">
+        <button type="button" id="pricing-page-pnr-toggled" class="">
+          <div class="block" style="background-color: #f7f7f7;">
+            <div class="image-wrapper">
+              <img src="" alt="Prepared & Ready">
+            </div>
+          </div>
+          <div class="meal-type-content">
+            <h4>Prepared & Ready</h4>
+            <p>Pre-made meals delivered fresh and ready in as little as 2 minutes. Starting at just R189.99.</p>
+          </div>
+          <div class="tick"></div>
+        </button>
+      </div>
+      <div class="text-container">
+        <p>Select Prepared & Ready meals can be added to meal kit orders as Add-ons each week.</p>
+      </div>
+ 
+      <div class="meal-kit-container">
+        <div class="preferences">
+          <!-- Preferences content goes here -->
+          <h2>Preferences</h2>
+          <!-- Add your preference options here -->
+        </div>
+       
+  </div>
+ 
+  <div id="available-meals">
+    <h2>Add a Meal to Cart</h2>
+    <div class="meal">
+      <h3>Cheese Burger</h3>
+      <p>Extra Spicy</p>
+      <p>No mayo</p>
+      <p>Price: R23.99</p>
+      <div class="quantity-selector">
+        <button onclick="decreaseQuantity()">-</button>
+        <input type="text" id="quantity" value="1" onchange="updateCartDisplay()">
+        <button onclick="increaseQuantity()">+</button>
+      </div>
+      <button onclick="addToCart()">Add to Cart</button>
+    </div>
+  </div>
+ 
+  <div id="add-coupon">
+    <h2>Add a Coupon</h2>
+    <input type="text" id="coupon-code" placeholder="Enter coupon code">
+    <button onclick="applyCoupon()">Apply Coupon</button>
+  </div>
+ 
+  <div id="shopping-cart">
+    <h2>Shopping Cart</h2>
+    <ul id="cart-items"></ul>
+    <p id="total-cost">Total Cost: R0</p>
+    <button class="checkout-btn" onclick="checkout()">Checkout</button>
+    <button onclick="clearCart()">Clear Cart</button>
+  </div>
+ 
+  <script>
+    let cartItems = [];
+    let totalCost = 0;
+ 
+    function addToCart() {
+      const mealName = "Cheese Burger"; // Assuming the meal name is fixed for now
+      const quantity = parseInt(document.getElementById('quantity').value);
+      const price = 23.99; // Assuming the price is fixed for now
+ 
+      for (let i = 0; i < quantity; i++) {
+        cartItems.push({ name: mealName, price });
+      }
+ 
+      updateCartDisplay();
+    }
+ 
+    function removeFromCart(index) {
+      cartItems.splice(index, 1);
+      updateCartDisplay();
+    }
+ 
+    function clearCart() {
+      cartItems = [];
+      totalCost = 0;
+      updateCartDisplay();
+    }
+ 
+    function applyCoupon() {
+      // Add logic to apply the coupon code and update the total cost if needed
+      const couponCode = document.getElementById('coupon-code').value;
+      // Assume applying coupon reduces total cost by 10%
+      totalCost *= 0.9; // 10% discount
+      updateCartDisplay();
+    }
+ 
+    function updateCartDisplay() {
+      const cartItemsList = document.getElementById('cart-items');
+      cartItemsList.innerHTML = '';
+      totalCost = 0;
+ 
+      cartItems.forEach((item, index) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${item.name} - R${item.price}`;
+ 
+        const removeButton = document.createElement('button');
+        removeButton.textContent = 'Remove';
+        removeButton.onclick = () => removeFromCart(index);
+ 
+        listItem.appendChild(removeButton);
+        cartItemsList.appendChild(listItem);
+ 
+        totalCost += item.price;
+      });
+ 
+      document.getElementById('total-cost').textContent = `Total Cost: R${totalCost.toFixed(2)}`;
+    }
+ 
+    function increaseQuantity() {
+      let quantityInput = document.getElementById('quantity');
+      let quantity = parseInt(quantityInput.value);
+      quantityInput.value = quantity + 1;
+      updateCartDisplay(); // Update total cost when quantity changes
+    }
+ 
+    function decreaseQuantity() {
+      let quantityInput = document.getElementById('quantity');
+      let quantity = parseInt(quantityInput.value);
+      if (quantity > 1) {
+        quantityInput.value = quantity - 1;
+        updateCartDisplay(); // Update total cost when quantity changes
+      }
+    }
+ 
+    function checkout() {
+      // Add logic for checkout process
+      alert('Checkout functionality will be implemented later.');
+    }
+  </script>
